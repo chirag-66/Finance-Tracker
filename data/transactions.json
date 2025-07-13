@@ -1,0 +1,18 @@
+[
+    {
+        "id": "ab456861-79ff-4dc1-83e2-1f10754e3b33",
+        "type": "income",
+        "amount": 15000.0,
+        "category": "salary",
+        "note": "jan salary",
+        "date": "2025-01-01"
+    },
+    {
+        "id": "0397994f-02b5-41f9-8ee5-0285e87fc67f",
+        "type": "expense",
+        "amount": 10000.0,
+        "category": "food",
+        "note": "resturant",
+        "date": "2025-01-12"
+    }
+]
