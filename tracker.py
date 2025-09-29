@@ -104,7 +104,7 @@ def search_transactions():
     
         found = False
         for i, t in enumerate(transactions, start=1):
-            if (pattern.search(t["note"]) or pattern.search(t["category"])):
+            if (pattern.search(t["type"]) or pattern.search(t["category"])):
                 print(f"\nTransaction {i}:")
                 print(f"    Type: {t['type']}")
                 print(f"    Amount: rup{t['amount']}")
@@ -151,15 +151,15 @@ def clear_csv_file(filename):
 def main_menu():
     while True:
         print("\n===== Expense Tracker =====")
-        print("1. AddTransaction")
-        print("2. View Transactions")
-        print("3. Delete Transaction")
-        print("4. view summary")
-        print("5. search Transactions")
-        print("6. Export to CSV")
-        print("7. deletejsonfile")
-        print("8. clearcsvfile")
-        print("9. Exit")
+        print(Fore.YELLOW + "1. AddTransaction")
+        print(Fore.YELLOW + "2. View Transactions")
+        print(Fore.YELLOW + "3. Delete Transaction")
+        print(Fore.YELLOW + "4. view summary")
+        print(Fore.YELLOW + "5. search Transactions")
+        print(Fore.YELLOW + "6. Export to CSV")
+        print(Fore.YELLOW + "7. deletejsonfile")
+        print(Fore.YELLOW + "8. clearcsvfile")
+        print(Fore.YELLOW + "9. Exit")
         
         choice = input("choose an option: ")
 
