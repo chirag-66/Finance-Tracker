@@ -1,4 +1,5 @@
 from models import Transaction
+import pandas as pd
 import json
 import os
 import re
@@ -144,7 +145,9 @@ def clear_csv_file(filename):
     with open(filename, "w", newline='') as csvfile:
          pass   
     print(Fore.GREEN + Style.BRIGHT + f"CSV file '{filename} cleared successfully.")
-         
+
+def show_csv_file():
+    print(pd.read_csv("data/transactions.csv"))         
                
 def main_menu():
     while True:
@@ -157,7 +160,8 @@ def main_menu():
         print(Fore.YELLOW + "6. Export to CSV")
         print(Fore.YELLOW + "7. deletejsonfile")
         print(Fore.YELLOW + "8. clearcsvfile")
-        print(Fore.YELLOW + "9. Exit")
+        print(Fore.YELLOW + "9. showdata")
+        print(Fore.YELLOW + "10". Exit)
         
         choice = input("choose an option: ")
 
@@ -178,6 +182,8 @@ def main_menu():
         elif choice == "8":
             clear_csv_file("data/transactions.csv")
         elif choice == "9":
+            show_csv_file()
+        elif choice == "10"
             print(Fore.YELLOW + Style.DIM + "Exiting... Goodbye! ")
             break
         else:
