@@ -161,7 +161,7 @@ def main_menu():
         print(Fore.YELLOW + "7. deletejsonfile")
         print(Fore.YELLOW + "8. clearcsvfile")
         print(Fore.YELLOW + "9. showdata")
-        print(Fore.YELLOW + "10". Exit)
+        print(Fore.YELLOW + "10. Exit")
         
         choice = input("choose an option: ")
 
@@ -183,7 +183,7 @@ def main_menu():
             clear_csv_file("data/transactions.csv")
         elif choice == "9":
             show_csv_file()
-        elif choice == "10"
+        elif choice == "10":
             print(Fore.YELLOW + Style.DIM + "Exiting... Goodbye! ")
             break
         else:
