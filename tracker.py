@@ -1,5 +1,3 @@
-print("Expense Tracker started")
-
 from models import Transaction
 import json
 import os
@@ -39,7 +37,7 @@ def add_transaction():
         note = input("Enter note: ").strip()
         date = input("Enter Exactdate: ")
     
-        # optional: Validate type
+        
         if type_ not in ['income', 'expense']:
             print("Invalid type. Must be 'income' or 'expense'.")
             return
